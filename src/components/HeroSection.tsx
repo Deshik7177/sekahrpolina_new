@@ -70,11 +70,18 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20"
     >
-      {/* Mesh gradient corners */}
+
+      {/* Social media icons background */}
       <div className="pointer-events-none absolute inset-0 z-0">
+        {/* Mesh gradients */}
         <div className="absolute top-0 left-0 w-[50vw] h-[50vh] bg-[radial-gradient(ellipse_at_top_left,rgba(7,126,255,0.18)_0%,transparent_65%)]" />
         <div className="absolute bottom-0 right-0 w-[50vw] h-[50vh] bg-[radial-gradient(ellipse_at_bottom_right,rgba(7,126,255,0.12)_0%,transparent_65%)]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vh] bg-[radial-gradient(ellipse,rgba(7,126,255,0.06)_0%,transparent_70%)]" />
+
+        {/* Social icons - Instagram, YouTube, Facebook */}
+        <img src="/icon-instagram.svg" alt="Instagram" className="absolute left-[8vw] top-[18vh] w-16 h-16 opacity-10" />
+        <img src="/icon-youtube.svg" alt="YouTube" className="absolute right-[10vw] bottom-[20vh] w-20 h-20 opacity-10" />
+        <img src="/icon-facebook.svg" alt="Facebook" className="absolute left-[55vw] top-[65vh] w-24 h-24 opacity-10" />
       </div>
 
       {/* Floating particles */}
