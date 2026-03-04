@@ -13,23 +13,21 @@ const VIDEO_LIST = [
 
 export default function AllVideosPage() {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center py-16">
-      <h1 className="text-4xl font-bold text-white mb-10">All Videos</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-full max-w-6xl px-4">
+    <div className="min-h-screen bg-black flex flex-col items-center py-8 px-2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 text-center">All Videos</h1>
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-4xl mx-auto">
         {VIDEO_LIST.map((src, i) => (
           <div
             key={src}
-            className="bg-gradient-to-br from-[#0a1833] to-[#1a233a] border-2 border-white rounded-xl shadow-2xl flex flex-col items-center p-4"
+            className="bg-gradient-to-br from-[#0a1833] to-[#1a233a] border border-white/20 rounded-xl shadow-xl flex flex-col items-center p-2 sm:p-4"
           >
             <video
               src={`/${src}`}
-              width={320}
-              height={180}
               controls
-              className="object-cover w-full h-48 rounded-xl mb-4"
+              className="object-cover w-full h-40 sm:h-48 rounded-xl mb-2 sm:mb-4"
               style={{ background: "#111" }}
             />
-            <span className="text-white text-lg font-semibold">{src.replace(/\.mp4$/, "").replace(/_/g, " ")}</span>
+            <span className="text-white text-sm sm:text-base font-semibold text-center break-words">{src.replace(/\.mp4$/, "").replace(/_/g, " ")}</span>
           </div>
         ))}
       </div>
