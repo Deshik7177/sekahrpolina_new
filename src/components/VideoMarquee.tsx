@@ -13,18 +13,10 @@ const VIDEO_LIST = [
 
 const DUPLICATED_LIST = [...VIDEO_LIST, ...VIDEO_LIST];
 const CARD_WIDTH = 260 + 32; // 260px video + 2*16px gap
-const TOTAL_WIDTH = CARD_WIDTH * VIDEO_LIST.length * 2;
+const TOTAL_WIDTH = (260 + 32) * VIDEO_LIST.length * 2;
 
-const marqueeVariants = {
-  animate: {
-    x: [-TOTAL_WIDTH / 2, 0],
-    transition: {
-      ease: [0, 0, 1, 1], // Use cubic-bezier for linear easing to satisfy TypeScript
-      duration: 25,
-      repeat: Infinity,
-    },
-  },
-};
+
+
 
 export default function VideoMarquee() {
   return (
@@ -39,8 +31,8 @@ export default function VideoMarquee() {
     >
       <motion.div
         className="flex gap-8"
-        variants={marqueeVariants}
-        animate="animate"
+        animate={{ x: [-TOTAL_WIDTH / 2, 0] }}
+        transition={{ ease: "linear", duration: 25, repeat: Infinity }}
         style={{ width: TOTAL_WIDTH }}
       >
         {DUPLICATED_LIST.map((src, i) => (
