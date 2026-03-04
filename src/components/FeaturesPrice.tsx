@@ -195,7 +195,8 @@ export default function FeaturesPrice() {
           >
             <div className="relative">
               <div className="absolute -inset-2 rounded-3xl pointer-events-none z-0" style={{ boxShadow: '0 0 40px 8px #077eff88' }} />
-              <NeonBeamCard className="rounded-3xl p-6 md:p-8 bg-gradient-to-br from-[#077eff]/80 to-[#00cfff]/70 shadow-2xl">
+              <div className="rounded-3xl p-6 md:p-8 bg-gradient-to-br from-[#077eff]/80 to-[#00cfff]/70 shadow-2xl">
+                <NeonBeamCard>
               {/* Badge */}
               <motion.div
                 animate={{ scale: [1, 1.05, 1] }}
@@ -264,7 +265,8 @@ export default function FeaturesPrice() {
               <p className="text-center text-white/40 text-xs mt-3">
                 Secure payment · Instant access · 7-day refund policy
               </p>
-              </NeonBeamCard>
+                </NeonBeamCard>
+              </div>
             </div>
           </motion.div>
         </div>
