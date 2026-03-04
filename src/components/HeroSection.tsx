@@ -185,26 +185,19 @@ export default function HeroSection() {
           }}
           className="mt-14 flex items-center gap-8 md:gap-16 text-center"
         >
-          {[
-            { value: "90", label: "Days", unit: "-Day Cohort" },
-            { value: "7+", label: "Years Experience", unit: "" },
-            { value: "10K+", label: "Students Taught", unit: "" },
-          ].map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 + i * 0.2 }}
-              className="flex flex-col items-center"
-            >
-              <span className="text-3xl md:text-4xl font-black gradient-text-blue">
-                {stat.value}
-              </span>
-              <span className="text-white/40 text-xs mt-1 tracking-wide">
-                {stat.value === "90" ? "Day Cohort" : stat.label}
-              </span>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="flex items-center justify-center w-full"
+          >
+            <span className="text-4xl md:text-6xl font-extrabold text-[#d4af37] gradient-text-blue mr-3">
+              7
+            </span>
+            <span className="text-2xl md:text-4xl font-bold text-[#f5f5f5] tracking-wide">
+              years of experience
+            </span>
+          </motion.div>
         </motion.div>
       </motion.div>
 
