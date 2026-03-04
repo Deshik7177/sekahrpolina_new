@@ -7,6 +7,7 @@ import {
   useSpring,
 } from "framer-motion";
 import MagneticButton from "./MagneticButton";
+import VideoMarquee from "./VideoMarquee";
 
 
 
@@ -209,43 +210,10 @@ export default function HeroSection() {
 
 
 
-      {/* Expanded Video Carousel - Only Videos */}
-      <motion.div
-        style={{ y: parallaxY }}
-        className="w-full flex justify-center items-center mt-8"
-      >
-        <motion.div
-          className="flex gap-8"
-          initial={{ x: 0 }}
-          animate={{ x: -540 }}
-          transition={{ repeat: Infinity, repeatType: "loop", duration: 18, ease: "linear" }}
-          style={{ willChange: "transform" }}
-        >
-          {[
-            "video 1.mp4",
-            "video 2 extra.mp4",
-            "video 3.mp4",
-            "video 4.mp4",
-            "Video 5_1(1).mp4",
-            "video 6_1.mp4",
-            "video 7_1.mp4",
-            "video 8.mp4",
-          ].map((src, i) => (
-            <video
-              key={src}
-              src={`/${src}`}
-              width={260}
-              height={160}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="object-cover rounded-xl shadow-lg"
-              style={{ minWidth: 260, minHeight: 160 }}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
+      {/* Video Marquee Section */}
+      <section className="w-full pt-4 pb-12">
+        <VideoMarquee />
+      </section>
 
       {/* Scroll indicator */}
       <motion.div
